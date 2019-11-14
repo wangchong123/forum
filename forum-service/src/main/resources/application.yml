@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+  application:
+    name: forum-service
+
+mybatis:
+  type-aliases-package: com.ww.forumcommon.entity
+  mapper-locations: classpath*:/mapper/**/*.xml
